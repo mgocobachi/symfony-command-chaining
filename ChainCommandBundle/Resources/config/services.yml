@@ -1,0 +1,6 @@
+services:
+  kernel.listener.console:
+    class: Gocobachi\ChainCommandBundle\Console\Event\Listener
+    tags:
+      - { name: kernel.event_listener, event: console.command, method: onConsoleCommand }
+      - { name: kernel.event_listener, event: console.terminate, method: onConsoleTerminate }
